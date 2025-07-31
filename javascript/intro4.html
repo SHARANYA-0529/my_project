@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: arial;
+             text-align: center;
+      padding: 50px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: #4CAF50;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    p {
+      margin-top: 20px;
+      font-size: 24px;
+    }
+        }
+    </style>
+</head>
+<body>
+    <h2>Driving Eligibility Checker</h2>
+    <input type="number" id="ageInput" placeholder="Enter your age">
+    <button onclick="checkEligibility()">check</button>
+    <p id="result"></p>
+    <script>
+        function checkEligibility(){
+            let age=document.getElementById("ageInput").value;
+            let output=documnet.getElementById("result");
+            age=Number(age);
+            if(age>=18){
+                output.innerHTML="you are eligible for drive.";
+            }else if(age<18 && age>0){
+                output.innerHTML="you are  not eligible for drive.";
+            }else{
+                output.innerHTML="please enter a valid age";
+            }
+        }
+    </script>
+</body>
+</html>

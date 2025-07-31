@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+}
+.row{
+    display:flex;
+    gap: 20px;
+}
+.card{
+    border:3px solid black;
+    width:300px;
+    padding :20px;
+    background:greenyellow;
+    margin-top:200px;
+    margin-left: 20px;
+}
+.box-demo-1{
+    border:5px solid whitesmoke;
+    padding:1.5rem;
+    margin:2rem;
+    background: whitesmoke;
+    border-radius: 20px;
+}
+.box-demo-2{
+    border:5px solid black;
+    padding:1.5rem;
+    margin:2rem;
+    background:aquamarine;
+}

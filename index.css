@@ -1,0 +1,35 @@
+ p{
+            color: blue;
+            font-size:18px;
+        }
+h1{
+    color:aqua;
+    text-align:center;
+ }
+.bpara{
+             color:red;
+              font-size:20px;
+              text-align:justify;
+              
+        }
+        .varshini{
+            border: 1px solid black;
+            text-align:center;
+        }
+        #spara{
+            text-align:center;
+        } 
+        .menu{
+            color:rgb(155, 5, 5);
+            
+        }
+        body{
+            background-color:lightcyan;
+        }
+        .profile-card{
+            width:300px;
+            text-align: center;
+            border:1px solid black;
+            border-radius: 12px;
+            padding: 200px;
+        }
