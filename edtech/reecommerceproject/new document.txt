@@ -1,0 +1,7 @@
+api.py
+pip install uvicorn fastapi torch numpy transformers
+pip install tf-keras
+uvicorn api:app --reload
+---------------------------------
+str.py
+pip install streamlit
