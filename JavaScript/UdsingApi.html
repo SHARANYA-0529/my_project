@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Dynamic User Profiles</title>
+  <style>
+    .card {
+      width: 300px;
+      padding: 20px;
+      margin: 10px;
+      background: #f9f9f9;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 10px #ccc;
+    }
+    .card h2 {
+      margin: 0 0 10px;
+    }
+    .card p {
+      margin: 5px 0;
+    }
+    #profilesContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    #loading {
+      text-align: center;
+      font-size: 1.2em;
+      margin-top: 50px;
+    }
+    #error {
+      color: red;
+      text-align: center;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="loading">Loading profiles…</div>
+  <div id="error" hidden></div>
+  <div id="profilesContainer" hidden></div>
+
+  <script>
+    // Create a card element for one user
+    function createProfileCard(user) {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `
+        <h2>${user.name}</h2>
+        <p>Number: ${user.number}</p>
+        <p>Profession: ${user.profession}</p>
+        <p>Email: <a href="mailto:${user.email}">${user.email}</a></p>
+      `;
+      return card;
+    }
+
+    // Render an array of users into the container
+    function renderProfiles(users) {
+      const container = document.getElementById('profilesContainer');
+      container.innerHTML = '';           // clear any existing content
+      users.forEach(user => {
+        container.appendChild(createProfileCard(user));
+      });
+      document.getElementById('loading').hidden = true;
+      container.hidden = false;
+    }
+
+    // Show an error message
+    function showError(msg) {
+      const errDiv = document.getElementById('error');
+      errDiv.textContent = msg;
+      document.getElementById('loading').hidden = true;
+      errDiv.hidden = false;
+    }
+
+    // Fetch users from the API and render
+    fetch('https://686503325b5d8d03397f4dbe.mockapi.io/api/v1/users')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`Server error: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        if (!Array.isArray(data) || data.length === 0) {
+          showError('No user data found.');
+        } else {
+          renderProfiles(data);
+        }
+      })
+      .catch(err => {
+        console.error(err);
+        showError('Failed to load profiles. Please try again later.');
+      });
+  </script>
+
+</body>
+</html>

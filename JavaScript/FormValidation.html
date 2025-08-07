@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    input { padding: 10px; font-size: 16px; }
+    .valid { border: 2px solid green; }
+    .invalid { border: 2px solid red; }
+  </style>
+</head>
+<body>
+
+<h3>Email Validator</h3>
+<input type="text" id="email" placeholder="Enter your email">
+<p id="status"></p>
+
+<script>
+  const emailInput = document.getElementById("email");
+  const status = document.getElementById("status");
+
+  emailInput.addEventListener("input", function () {
+    let value = emailInput.value;
+    if (value.includes("@") && value.includes(".")) {
+      emailInput.classList.add("valid");
+      emailInput.classList.remove("invalid");
+      status.innerText = "✅ Valid email";
+    } else {
+      emailInput.classList.add("invalid");
+      emailInput.classList.remove("valid");
+      status.innerText = "❌ Invalid email";
+    }
+  });
+</script>
+
+</body>
+</html>
