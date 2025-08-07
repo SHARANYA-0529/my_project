@@ -1,0 +1,10 @@
+streamlit
+torchvision
+numpy
+uvicorn
+fastapi
+opencv-python 
+transformers
+matplotlib
+huggingface[hft]
+streamlit_drawable_canvas
