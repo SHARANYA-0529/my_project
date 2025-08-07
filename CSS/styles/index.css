@@ -1,0 +1,46 @@
+ /* p{
+            color:blue;
+            font-size:18px;
+        }
+h1{
+    color:aqua;
+    text-align:right;
+}
+.bpara{
+    color:red;
+    font-size:20px;
+    text-align:match-parent;
+}
+
+.example{
+    border: 1px solid black;
+    text-align:center;
+}
+.text-left{
+    text-align:left;
+}
+#spara{
+    text-align:right;
+}
+
+#main-title {
+  font-size: 2rem;
+  color: #2a9d8f;
+} */
+/* *{
+    color:red;
+} */
+.profile-card{
+    width:300px;
+    text-align:center;
+    border: 1px solid black;
+    border-radius: 12px;
+    padding:20px;
+}
+.profile-card button{
+    background-color:#007bff;
+    padding:10px 18px;
+    border-radius: 20px;
+    border:none;
+    margin-bottom: 20px;
+}

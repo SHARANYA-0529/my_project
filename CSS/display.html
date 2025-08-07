@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/display.css">
+</head>
+<body>
+    <h2>1. <code>display: block</code></h2>
+  <div class="demo-container">
+    <div class="box block">.block</div>
+    <div class="box block">.block</div>
+  </div>
+  <p>– Each `.block` starts on a new line and stretches the full available width (or your set width).</p>
+
+  <h2>2. <code>display: inline</code></h2>
+  <div class="demo-container">
+    <span class="box inline">.inline</span>
+    <span class="box inline">.inline</span>
+  </div>
+  <p>– `.inline` boxes flow with text. Width/height settings are ignored.</p>
+
+  <h2>3. <code>display: none</code></h2>
+  <div class="demo-container">
+    <div class="box none">.none (you won’t see me!)</div>
+    <div class="box">I’m still visible</div>
+  </div>
+  <p>– `.none` removes the element entirely from the layout.</p>
+
+  <h2>4. <code>display: inline-block</code></h2>
+  <div class="demo-container">
+    <span class="box inline-block">.inline-block</span>
+    <span class="box inline-block">.inline-block</span>
+  </div>
+  <p>– Like inline, but you can set width/height.</p>
+
+  <h2>5. <code>display: table</code> (with rows & cells)</h2>
+  <div class="demo-container table">
+    <div class="table-row">
+      <div class="table-cell">Cell 1</div>
+      <div class="table-cell">Cell 2</div>
+      <div class="table-cell">Cell 3</div>
+    </div>
+    <div class="table-row">
+      <div class="table-cell">Cell 4</div>
+      <div class="table-cell">Cell 5</div>
+      <div class="table-cell">Cell 6</div>
+    </div>
+  </div>
+  <p>– Mirrors HTML `<table>` structure via CSS. Useful when you need table-like layouts without actual `<table>` markup.</p>
+
+  <h2>6. <code>display: flex</code></h2>
+  <div class="demo-container flex">
+    <div class="box">Flex 1</div>
+    <div class="box">Flex 2</div>
+    <div class="box">Flex 3</div>
+  </div>
+  <p>– Creates a one-dimensional flex container. Children share a row (or column if you set `flex-direction`).</p>
+
+  <h2>7. <code>display: grid</code></h2>
+  <div class="demo-container grid">
+    <div class="box">Grid 1</div>
+    <div class="box">Grid 2</div>
+    <div class="box">Grid 3</div>
+    <div class="box">Grid 4</div>
+    <div class="box">Grid 5</div>
+    <div class="box">Grid 6</div>
+  </div>
+  <p>– Creates a two-dimensional grid. You define rows/columns via `grid-template-...`.</p>
+</body>
+</html>

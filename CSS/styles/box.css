@@ -1,0 +1,46 @@
+*{
+    box-sizing:border-box;
+}
+
+.row{
+    display:flex;
+   gap:20px;
+}
+.card{
+    border:2px solid black;
+    width:300px;
+    padding:20px;
+    background:#1c6e6e;
+    margin-top:20px;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    line-height:1.6;
+    padding:2rem;
+    background-color: #fafafa;
+}
+.box-demo-1{
+    border:1px solid #333;
+    padding:1.5rem;
+    margin:2rem 0;
+    background-color:chocolate;
+}
+.box-demo-2{
+   
+    border:1px dashed #333;
+    padding:2rem 1rem;
+    margin:3rem 1rem;
+    background-color:rgb(88, 57, 34);
+}
+
+.blog-card {
+  width: 100%;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 2px solid #3498db;
+  border-radius: 10px;
+  background: #fdfdfd;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}

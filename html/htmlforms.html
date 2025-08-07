@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="/submit" method="POST">
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username">
+  <input type="submit" value="Login">
+</form>
+
+   <form>
+  <input type="text" placeholder="Your Name"><br>
+  <input type="email" placeholder="Your Email"><br>
+  <input type="password" placeholder="Password"><br>
+  <input type="number" min="1" max="100"><br>
+  <input type="date"><br>
+  <input type="file"><br>
+  <input type="url" placeholder="https://example.com"><br>
+  <input type="tel" placeholder="123-456-7890"><br>
+</form>
+<!-- Radio Group -->
+<p>Select Gender:</p>
+<input type="radio" id="male" name="gender" value="male">
+<label for="male">Male</label><br>
+<input type="radio" id="female" name="gender" value="female">
+<label for="female">Female</label><br>
+
+<!-- Checkboxes -->
+<p>Select Skills:</p>
+<input type="checkbox" id="html" name="skills" value="HTML">
+<label for="html">HTML</label><br>
+<input type="checkbox" id="css" name="skills" value="CSS">
+<label for="css">CSS</label><br>
+
+<!-- Single select -->
+<label for="country">Select Country:</label>
+<select id="country" name="country">
+  <option value="">--Choose--</option>
+  <option value="india">India</option>
+  <option value="usa">USA</option>
+</select>
+
+<!-- Multiple selection -->
+<select multiple>
+  <option value="python">Python</option>
+  <option value="java">Java</option>
+</select>
+
+<label for="bio">About You:</label><br>
+<textarea id="bio" name="bio" rows="4" cols="40" placeholder="Write here..."></textarea>
+
+<form>
+  <fieldset>
+    <legend>Contact Information</legend>
+    <label>Name: <input type="text" name="name"></label><br>
+    <label>Email: <input type="email" name="email"></label>
+  </fieldset>
+</form>
+
+
+<input type="text" required placeholder="Required Field">
+<input type="email" pattern="[^@]+@[^\.]+\..+" title="Email Format Only">
+<input type="number" min="1" max="10">
+<input type="text" maxlength="20">
+<input type="text" readonly value="Read only data">
+<input type="text" disabled value="Cannot interact">
+<input type="text" autofocus>
+<br>
+<input type="hidden" name="user_id" value="12345">
+<form action="/register" method="POST">
+  <fieldset>
+    <legend>Register</legend>
+
+    <label for="fname">Full Name:</label>
+    <input type="text" id="fname" name="fullname" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label>Password:</label>
+    <input type="password" name="password" required><br><br>
+
+    <label>Gender:</label>
+    <input type="radio" name="gender" value="male"> Male
+    <input type="radio" name="gender" value="female"> Female<br><br>
+
+    <label>Hobbies:</label>
+    <input type="checkbox" name="hobby" value="music"> Music
+    <input type="checkbox" name="hobby" value="travel"> Travel<br><br>
+
+    <label>Country:</label>
+    <select name="country">
+      <option>India</option>
+      <option>USA</option>
+    </select><br><br>
+
+    <label>Bio:</label><br>
+    <textarea name="bio" rows="4" cols="30" placeholder="Tell us about yourself..."></textarea><br><br>
+
+    <input type="submit" value="Register">
+    <input type="reset">
+  </fieldset>
+</form>
+</body>
+</html>
